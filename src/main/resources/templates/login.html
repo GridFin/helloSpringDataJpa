@@ -30,6 +30,12 @@
   </div>
 </div>
 
+<script th:inline="javascript">
+  let errorMsg = /*[[${errorMsg == null ? 'null' : '"' + errorMsg + '"'}]]*/ null;
+  if (errorMsg !== null && errorMsg !== 'null') {
+    alert(errorMsg);
+  }
+</script>
 <div th:insert="~{common :: commonScript}"></div>
 </body>
 </html>
